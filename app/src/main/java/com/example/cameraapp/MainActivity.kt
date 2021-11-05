@@ -155,20 +155,13 @@ class MainActivity : AppCompatActivity() {
         val path = Environment.getExternalStorageDirectory().toString()
         val sdf = SimpleDateFormat("hh_mm_ss")
         val currentDate = sdf.format(Date())
-        //File(path, "photo${currentDate}.png").writeBitmap(bitmap, Bitmap.CompressFormat.PNG, 85)
+
         Log.v("DemoCameraApp", "\"photo${currentDate}.png\"")
         saveImage(bitmap,"\"photo${currentDate}.png\"")
 
     }
 
-    /*
-    private fun File.writeBitmap(bitmap: Bitmap, format: Bitmap.CompressFormat, quality: Int){
-        outputStream().use {
-            out -> bitmap.compress(format, quality, out)
-            out.flush()
-            out.close()
-        }
-    }*/
+
 
 
     // Method to save an image to gallery and return uri
